@@ -11,6 +11,7 @@ module pump_fun::config {
     public struct FeeConfig has key {
         id: UID,
         fee_recipient: address,
+        //100% = 10000
         fee_rate: u64,
     }
 
