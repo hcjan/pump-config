@@ -19,7 +19,7 @@ CetusClmm = { git = "https://github.com/CetusProtocol/cetus-clmm-interface.git",
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-pump_fun = "0xd83e6ef80d8a110d4ccefa7202998ab4f362909eedaee1c6b60d82a23aa98a82"
+pump_fun = "0xe1c90e76549ba30e67df9d5d81d1b978477b28cad26308501d22cb25e984da45"
 
 
 
