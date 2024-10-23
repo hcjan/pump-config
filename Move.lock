@@ -2,7 +2,7 @@
 
 [move]
 version = 2
-manifest_digest = "4A5FB29F078D3D9B4A7E90D50A23D659BC6E8BA741562ED37BCE729FDB4B6527"
+manifest_digest = "AE77C7ED66BACA1068943D5AA1846FA50C3B19BC8860C3218B5CF5B32A75FC43"
 deps_digest = "3C4103934B1E040BB6B23F1D610B4EF9F2F1166A50A104EADCF77467C004C600"
 dependencies = [
   { name = "CetusClmm" },
@@ -56,8 +56,8 @@ flavor = "sui"
 
 [env.testnet]
 chain-id = "4c78adac"
-original-published-id = "0xe1c90e76549ba30e67df9d5d81d1b978477b28cad26308501d22cb25e984da45"
-latest-published-id = "0xe1c90e76549ba30e67df9d5d81d1b978477b28cad26308501d22cb25e984da45"
+original-published-id = "0xe0b5aa05be03ad4e8d51edce0ca2425b63dceca824c42aee1d60805d02b11d5c"
+latest-published-id = "0xe0b5aa05be03ad4e8d51edce0ca2425b63dceca824c42aee1d60805d02b11d5c"
 published-version = "1"
 
 [env.mainnet]

@@ -1,16 +1,18 @@
-module pump_fun::math {
+module cetus_fun::math {
     use sui::math::{sqrt, pow};
-    const COEFFICIENT: u64 = 316_227_660 * 100;
+    
+    const COEFFICIENT: u64 = 31622776601683;
     const PRECISION: u64 = 1_000_000_000;
 
-    const MAX_SUI_TO_RAISE: u64 = 10_000_000_000_000; // 1,000,000 SUI (in MIST)
+
+    const MAX_SUI_TO_RAISE: u64 = 1_000_000_000; // 1,000,000 SUI (in MIST)
 
     /// Calculate the amount of tokens that can be bought with a given amount of SUI
     /// @param sold_amount: The amount of tokens already sold
     /// @param sui_amount: The amount of SUI to be spent on buying tokens
     /// @return The amount of tokens that can be bought
     public fun calculate_buy_amount(sui_raised_amount: u64, sui_amount: u64): u64 {
-        COEFFICIENT * (sqrt(sui_amount + sui_raised_amount) - sqrt(sui_raised_amount)) / COEFFICIENT
+        COEFFICIENT * (sqrt(sui_amount + sui_raised_amount) - sqrt(sui_raised_amount)) 
     }
 
     /// Calculate the amount of SUI that can be received by selling a given amount of tokens

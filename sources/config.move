@@ -1,4 +1,4 @@
-module pump_fun::config {
+module cetus_fun::config {
 
     use sui::event;
 
@@ -15,7 +15,13 @@ module pump_fun::config {
         fee_rate: u64,
     }
 
-    /// Event emitted when fee config is updated
+
+    /// Event emitted when fee config is created
+    public struct FeeConfigCreated has copy, drop {
+        fee_config_id: ID
+    }
+
+
     public struct FeeConfigUpdated has copy, drop {
         new_recipient: address,
         new_rate: u64,
@@ -34,7 +40,11 @@ module pump_fun::config {
             fee_recipient: tx_context::sender(ctx),
             fee_rate: 1,
         };
+        let fee_config_id = object::id(&fee_config);
         transfer::share_object(fee_config);
+        event::emit(FeeConfigCreated {
+            fee_config_id
+        });
     }
 
     /// Get the current fee recipient address
@@ -64,5 +74,4 @@ module pump_fun::config {
         });
     }
 
-  
 }
